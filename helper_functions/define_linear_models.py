@@ -21,9 +21,9 @@ def define_linear_model(X_train, y_train):
     # List of linear models available in scikit-learn
     linear_models = [
         ('LinearRegression', linear_model.LinearRegression()),
-        ('Ridge', linear_model.Ridge()),
-        ('Lasso', linear_model.Lasso()),
-        ('ElasticNet', linear_model.ElasticNet()),
+        ('Ridge', linear_model.Ridge(alpha=0.5)),
+        ('Lasso', linear_model.Lasso(alpha=0.5)),
+        ('ElasticNet', linear_model.ElasticNet(l1_ratio=0.5)),
         ('SGDRegressor', linear_model.SGDRegressor())
         # Add more linear models if needed
     ]
